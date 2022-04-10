@@ -13,21 +13,21 @@
 
             //Main code here
 
-                $numbers = array (12,34,2,6,78) ; //This is an Indexed array
+              //   $numbers = array (12,34,2,6,78) ; //This is an Indexed array
 
-               foreach ($numbers as $key => $value) {
+              //  foreach ($numbers as $key => $value) {
 
-                if ($value % >=  1) {
+              //   // if ($value % >=  1) {
                 
-                echo ++$key . '-' . $value ."is a prime" ;
-                echo "<br>";
-                } 
+              //   echo ++$key . '-' . $value ."is a prime" ;
+              //   echo "<br>";
+              //   } 
 
-                else 
-                echo ++$key. '-' . $value . "is not a prime" ;
-                 echo "<br>";
+              //   else 
+              //   echo ++$key. '-' . $value . "is not a prime" ;
+              //    echo "<br>";
 
-               }
+              //  }
             
                     /*Output
                      */
@@ -38,9 +38,66 @@
                         Must mention Which type of array you have made. */
 
 
-                        echo "<h3>Question-1: Finding prime numbers from array:  array [12,34,2,6,78] </h3>"; //HTML Headline
+                        echo "<h3>Question-2: Array of 5 products from Daraz website </h3>"; //HTML Headline
                         echo "<hr/>"; //HTML horizontal line
 
                          //Main code here
+                         $products = array('Kitchen Appliances' => 'Samsung Top Mount Refrigerator', 'Mobiles' => 'Realme Narzo 30 - 6GB RAM/128GB ROM', 'Health & Beauty' => 'Baby Olive Oil - 100ml', 'Clothing' => 'Party Wear Gown', 'Beverages' => 'Tata Tea Premium Leaf '); //This is an Associative array
+                        
+                         foreach ($products as $key => $product) {
+                           echo $key . ' - ' . $product;
+                           echo "<br/>";
+                         }
+
+
+                         /* Question 03: 
+                       This is an array array(0,10,80,67,60,89,91,56,45,30,95,83,99) 
+                        Find the maximum value from this array.
+                        Must use a foreach loop. */
+
+
+                        echo "<h3>Question-3: Finding maximum value from array(0,10,80,67,60,89,91,56,45,30,95,83,99)</h3>"; //HTML Headline
+                        echo "<hr/>"; //HTML horizontal line
+
+                        //Main code here
+                        $all_numbers = array(0,10,80,67,60,89,91,56,45,30,95,83,99);
+                        $max_counter = 0;
+
+                        foreach ($all_numbers as $key => $value) {
+                          if ($value > $max_counter) {
+                            $max_counter = $value;
+                          }
+                        }
+                        echo "The maximum value is : " . $max_counter; // Idea found from https://stackoverflow.com/questions/6676768/php-get-highest-value-from-array
+
+
+
+                          /* Question 04: 
+                       Let’s traverse this array(0,10,80,67,60,89,91,56,45,30,95,83,99) and print 0 index then skip 1 index again print 2 skip 3…. */
+
+
+                        echo "<h3>Question-4: Traversing array(0,10,80,67,60,89,91,56,45,30,95,83,99) and printing 0 index then skip 1 index again print 2 skip 3…. </h3>"; //HTML Headline
+                        echo "<hr/>"; //HTML horizontal line
+
+                        //Main code here
+                        $nums = array(0,10,80,67,60,89,91,56,45,30,95,83,99);
+
+                          foreach ($nums as $key => $value) {
+
+                          if($key%2 != 0) {
+                            continue;
+                          }
+
+                            echo $value . "<br>";
+                            
+                          }
+
+                          /*Output:    0
+                                              80
+                                              60
+                                              91
+                                              45
+                                              95
+                                              99 */                         
 
 ?>
