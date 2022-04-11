@@ -12,24 +12,30 @@
 
 
             //Main code here
+                $numbers = array(12,34,2,6,78); //This is an indexed array.
+                  $n = 0;
 
-              //   $numbers = array (12,34,2,6,78) ; //This is an Indexed array
+                  foreach($numbers as $value) {
 
-              //  foreach ($numbers as $key => $value) {
+                  for($i = 2; $i < $value; $i++) {
+                    if($value % $i == 0){
+                      $n++;
+                      break;
+                    }
+                  }
 
-              //   // if ($value % >=  1) {
-                
-              //   echo ++$key . '-' . $value ."is a prime" ;
-              //   echo "<br>";
-              //   } 
-
-              //   else 
-              //   echo ++$key. '-' . $value . "is not a prime" ;
-              //    echo "<br>";
-
-              //  }
-            
+                  if ($n == 2){
+                    echo $value." is a prime number." . "<br>";
+                  } else {
+                    echo $value." is not a prime number." . "<br>";
+                  }
+                       }
                     /*Output
+                    12 is not a prime number.
+                    34 is a prime number.
+                    2 is a prime number.
+                    6 is not a prime number.
+                    78 is not a prime number.
                      */
 
                      /* Question 02: 
@@ -98,6 +104,7 @@
                                               91
                                               45
                                               95
-                                              99 */                         
+                                              99 */              
+                                                         
 
 ?>
